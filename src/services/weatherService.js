@@ -9,6 +9,14 @@ const weatherService = {
     } catch (error) {
       console.log(error)
     }
+  },
+  async getCityByName(name) {
+    try {
+      const cityWeather = await weatherRepository.getCityByName(name)
+      return weatherFactory.formatCityWeather(cityWeather) 
+    } catch (error) {
+      console.log(error)
+    }
   }
 }
 

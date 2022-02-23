@@ -4,22 +4,22 @@ const {
 } = process.env
 
 const weatherRepository = {
-  // async fetchCurrentCityWeather() {
-  //   try {
-  //     const data = await fetch(`${ REACT_APP_API_URL }/current.json?key=${ REACT_APP_API_KEY }&q=50.62925,3.057256`)
-  //     return await data.json()
-  //   } catch(error) {
-  //     console.log('error', error)
-  //   }
-  // },
   async getCityByCoords({ latitude, longitude }) {
     try {
-      const currentCityForecast = await fetch(`${ REACT_APP_API_URL }/forecast.json?key=${ REACT_APP_API_KEY }&q=${ latitude },${ longitude }&days=7`)
-      return await currentCityForecast.json()
+      const cityForecast = await fetch(`${ REACT_APP_API_URL }/forecast.json?key=${ REACT_APP_API_KEY }&q=${ latitude },${ longitude }&days=7`)
+      return await cityForecast.json()
     } catch(error) {
       console.log(error)
     }
   },
+  async getCityByName(name) {
+    try {
+      const cityForecast = await fetch(`${ REACT_APP_API_URL }/forecast.json?key=${ REACT_APP_API_KEY }&q=${ name }&days=7`)
+      return await cityForecast.json()
+    } catch(error) {
+      console.log(error)
+    }
+  }
 }
 
 export default weatherRepository

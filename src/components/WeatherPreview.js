@@ -1,13 +1,7 @@
 import weatherHelper from '../helpers/weatherHelper'
 import iconsHelper from '../helpers/iconsHelper'
-import moment from 'moment'
 
 export default function WeatherPreview({ city }) {
-
-  function isDayOrNight(time) {
-    return moment(time, 'YYYY-MM-DD HH:mm').isBetween(moment('07', 'HH'), moment('21', 'HH'), 'hours')
-  }
-
   return <div className="pt-10">
     <figure className="min-h-[240px]">
       <img
