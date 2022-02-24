@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react'
-import { Link } from 'react-router-dom'
-import iconsHelper from '../helpers/iconsHelper'
 import weatherService from '../services/weatherService'
+import CityCard from '../components/CityCard'
 import { useAppState } from '../store'
 
 export default function FavoritesCitiesView() {
@@ -64,38 +63,8 @@ export default function FavoritesCitiesView() {
     </form>
     <ul className="grid grid-cols-2 gap-5 pt-12">
 
-      { cityName.length && cityWeather ? <li>
-        <Link to={ `/favorites/${ cityWeather.location.name.toLowerCase() }` } className="relative block p-5 bg-white/5 rounded-[20px]">
-          <p className="text-[28px]">
-            <span>{ Math.round(cityWeather.current.temp_c) }</span>
-            <sup>°</sup>
-          </p>
-          <p className="pb-6 text-white/60 font-light">{ cityWeather.current.condition.text }</p>
-          <h2 className="text-[18px]">{ cityWeather.location.name }</h2>
-          <img
-            src={ iconsHelper.getWeatherIcon(cityWeather.current.condition.code, true) }
-            alt={ cityWeather.current.condition.text }
-            className="absolute top-5 right-5 w-16"
-          />
-        </Link>
-      </li> : <>
-
-        { favoritesCitiesList.map(city => <li>
-          <Link to={ `/favorites/${ city.location.name.toLowerCase() }` } className="relative block p-5 bg-white/5 rounded-[20px]">
-            <p className="text-[28px]">
-              <span>{ Math.round(city.current.temp_c) }</span>
-              <sup>°</sup>
-            </p>
-            <p className="pt-3 pb-3 text-white/60 font-light">{ city.current.condition.text }</p>
-            <h2 className="text-[18px]">{ city.location.name }</h2>
-            <img
-              src={ iconsHelper.getWeatherIcon(city.current.condition.code, true) }
-              alt={ 'current weather' }
-              className="absolute top-5 right-5 w-16"
-            />
-          </Link>
-        </li> )}
-
+      { cityName.length && cityWeather ? <li><CityCard city={ cityWeather }/></li> : <>
+        { favoritesCitiesList.map((city, key) => <li key={ key }><CityCard city={ city }/></li> )}
       </> }
 
     </ul>
