@@ -31,13 +31,11 @@ export default function FavoritesCitiesView() {
     e.preventDefault()
     const cityWeather = await getCityWeather(cityName)
     setCityWeather(cityWeather)
-    console.log(cityWeather)
   }
 
   useEffect(async () => {
     const favoritesCitiesList = await getMultiplesCityWeather(favoritesCities)
     setFavoritesCitiesList(favoritesCitiesList)
-    console.log(favoritesCitiesList)
   }, [])
 
   return <>
