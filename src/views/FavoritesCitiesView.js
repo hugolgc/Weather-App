@@ -70,7 +70,7 @@ export default function FavoritesCitiesView() {
             <span>{ Math.round(cityWeather.current.temp_c) }</span>
             <sup>°</sup>
           </p>
-          <p className="pb-6 text-white/60 font-light">{ cityWeather.current.condition.text }</p>
+          <p className="pb-6pt-3 pb-3 text-white/60 font-light">{ cityWeather.current.condition.text }</p>
           <h2 className="text-[18px]">{ cityWeather.location.name }</h2>
           <img
             src={ iconsHelper.getWeatherIcon(cityWeather.current.condition.code, true) }

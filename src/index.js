@@ -7,6 +7,7 @@ import MainLayout from './layouts/MainLayout'
 import CurrentCityWeatherView from './views/CurrentCityWeatherView'
 import FavoritesCitiesView from './views/FavoritesCitiesView'
 import CityWeatherView from './views/CityWeatherView'
+import './assets/style.css'
 import './assets/font.css'
 import reportWebVitals from './reportWebVitals'
 
