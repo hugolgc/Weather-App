@@ -17,6 +17,17 @@ const weatherService = {
     } catch (error) {
       console.log(error)
     }
+  },
+  async getMultipleCitiesByName(cities) {
+    let citiesWeather = []
+    try {
+      for (const city of cities) {
+        citiesWeather.push(this.getCityByName(city))
+      }
+      return await Promise.all(citiesWeather)
+    } catch (error) {
+      console.log(error)
+    }
   }
 }
 

@@ -7,6 +7,7 @@ const iconsHelper = {
     1030: [require('../assets/icons/sun/6.png'), require('../assets/icons/moon/10.png')],
     1063: [require('../assets/icons/sun/6.png'), require('../assets/icons/moon/10.png')],
     1066: [require('../assets/icons/cloud/23.png'), require('../assets/icons/moon/10.png')],
+    1069: [require('../assets/icons/cloud/23.png'), require('../assets/icons/moon/10.png')],
     1087: [require('../assets/icons/cloud/25.png'), require('../assets/icons/moon/10.png')],
     1114: [require('../assets/icons/cloud/18.png'), require('../assets/icons/moon/10.png')],
     1117: [require('../assets/icons/sun/6.png'), require('../assets/icons/moon/10.png')],

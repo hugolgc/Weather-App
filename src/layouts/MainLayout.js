@@ -4,8 +4,8 @@ export default function MainLayout() {
   return <main className="relative min-h-screen max-w-xl mx-auto px-7 pt-12 pb-24 overflow-x-hidden">
     <Outlet />
     <footer className="fixed right-0 bottom-0 left-0">
-      <nav className="h-24 max-w-xl mx-auto flex justify-around pt-7 bg-[#060620]">
-        <Link to="/" className="text-white/60">
+      <nav className="h-24 max-w-xl mx-auto flex justify-evenly pt-7 bg-[#060620]">
+        <Link to="/">
           <span className="sr-only">Accueil</span>
           <span>
             <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -14,7 +14,7 @@ export default function MainLayout() {
             </svg>
           </span>
         </Link>
-        <Link to="/favourites" className="text-white/60">
+        <Link to="/favorites">
           <span className="sr-only">Favoris</span>
           <span>
             <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -22,14 +22,6 @@ export default function MainLayout() {
             </svg>
           </span>
         </Link>
-        <div className="text-white/60">
-          <span className="sr-only">Recherche</span>
-          <span>
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-            </svg>
-          </span>
-        </div>
       </nav>
     </footer>
   </main>
