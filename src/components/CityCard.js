@@ -9,6 +9,7 @@ export default function CityCard({ city }) {
   </p>
   <p className="pt-3 pb-3 text-white/60 font-light">{ city.current.condition.text }</p>
   <h2 className="text-[18px]">{ city.location.name }</h2>
+  {/* { city.current.condition.code } */}
   <img
     src={ iconsHelper.getWeatherIcon(city.current.condition.code, true) }
     alt={ city.current.condition.text }

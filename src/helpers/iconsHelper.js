@@ -21,6 +21,7 @@ const iconsHelper = {
     1189: [require('../assets/icons/cloud/7.png'), require('../assets/icons/moon/10.png')],
     1192: [require('../assets/icons/cloud/7.png'), require('../assets/icons/moon/10.png')],
     1195: [require('../assets/icons/cloud/7.png'), require('../assets/icons/moon/10.png')],
+    1213: [require('../assets/icons/snow/36.png'), require('../assets/icons/moon/40.png')],
     1240: [require('../assets/icons/cloud/7.png'), require('../assets/icons/moon/10.png')],
     1243: [require('../assets/icons/cloud/7.png'), require('../assets/icons/moon/10.png')],
     1246: [require('../assets/icons/cloud/7.png'), require('../assets/icons/moon/10.png')]
